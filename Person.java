@@ -98,4 +98,11 @@ public class Person
         }
         return descendent;
     }
+    
+    /**
+     * Indica el numero de descendientes de la persona
+     */
+    public int getNumberOfChildren(){
+        return children.size();
+    }
 }
