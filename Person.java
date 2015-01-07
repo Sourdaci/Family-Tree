@@ -22,4 +22,12 @@ public class Person
         this.name = name;
         this.age = age;
     }
+    
+    /**
+     * Muestra el nombre y la edad de la persona
+     */
+    public void showData(){
+        System.out.println("Nombre: " + name);
+        System.out.println("Edad: " + age);
+    }
 }
