@@ -29,7 +29,7 @@ public class Person
      */
     public void showData(){
         System.out.println("Nombre: " + name);
-        System.out.println("Edad: " + age);
+        System.out.println("Edad: " + age + "\n");
     }
     
     /**
@@ -79,7 +79,7 @@ public class Person
      */
     public void showChildrenData(){
         if(children.size() == 0){
-            System.out.println(name + " no tiene descendencia");
+            System.out.println(name + " no tiene descendencia\n");
         }else{
             System.out.println("Los descendientes de " + name + " son:");
             for(Person descendent : children){
@@ -104,5 +104,27 @@ public class Person
      */
     public int getNumberOfChildren(){
         return children.size();
+    }
+    
+    /**
+     * Indica si la persona tiene hermanos o hermanas
+     * Solo si tiene, no el numero de ellos
+     */
+    public boolean hasBrothers(){
+        // El metodo intenta ser simple:
+        // Si mi padre o mi madre tienen mas de 1 descendiente...
+        // Tengo hermanos. Salvo error de asignacion de datos...
+        // si solo tienen 1 hijo, soy yo
+        boolean brotherSister = false;
+        if(father != null){
+            if(father.getNumberOfChildren() > 1){
+                brotherSister = true;
+            }
+        }else if(mother != null){
+            if(mother.getNumberOfChildren() > 1){
+                brotherSister = true;
+            }
+        }
+        return brotherSister;
     }
 }
