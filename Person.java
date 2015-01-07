@@ -30,4 +30,18 @@ public class Person
         System.out.println("Nombre: " + name);
         System.out.println("Edad: " + age);
     }
+    
+    /**
+     * Indica a la persona cual es su Padre
+     */
+    public void setFather(Person father){
+        this.father = father;
+    }
+    
+    /**
+     * Indica a la persona cual es su Madre
+     */
+    public void setMother(Person mother){
+        this.mother = mother;
+    }
 }
