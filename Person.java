@@ -21,6 +21,7 @@ public class Person
     public Person(String name, int age){
         this.name = name;
         this.age = age;
+        children = new ArrayList<Person>();
     }
     
     /**
@@ -43,5 +44,12 @@ public class Person
      */
     public void setMother(Person mother){
         this.mother = mother;
+    }
+    
+    /**
+     * Indica a la persona que tiene un nuevo descendiente
+     */
+    public void addChild(Person child){
+        children.add(child);
     }
 }
