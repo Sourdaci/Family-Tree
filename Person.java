@@ -52,4 +52,24 @@ public class Person
     public void addChild(Person child){
         children.add(child);
     }
+    
+    /**
+     * Muestra los datos del padre y la madre de la persona
+     * Deben haberse indicado antes o se mostrara un error
+     */
+    public void showParentsData(){
+        System.out.println("Datos de los padres de " + name);
+        if(father == null){
+            System.out.println("ERROR: No se ha indicado quien es el padre de la persona");
+        }else{
+            System.out.println("PADRE:");
+            father.showData();
+        }
+        if(mother == null){
+            System.out.println("ERROR: No se ha indicado quien es la madre de la persona");
+        }else{
+            System.out.println("MADRE:");
+            mother.showData();
+        }
+    }
 }
