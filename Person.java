@@ -87,4 +87,15 @@ public class Person
             }
         }
     }
+    
+    /**
+     * Indica si la persona tiene descendencia
+     */
+    public boolean hasChildrens(){
+        boolean descendent = false;
+        if(children.size() > 0){
+            descendent = true;
+        }
+        return descendent;
+    }
 }
