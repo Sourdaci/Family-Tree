@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Persona sobre la que trabajar
  */
@@ -8,6 +8,10 @@ public class Person
     private String name;
     // Edad de la persona
     private int age;
+    // Padre y Madre de esta persona
+    private Person father, mother;
+    // Hijos e Hijas de esta persona (si tiene)
+    private ArrayList<Person> children;
 
     /**
      * Nueva persona para el programa
