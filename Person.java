@@ -21,6 +21,8 @@ public class Person
     public Person(String name, int age){
         this.name = name;
         this.age = age;
+        father = null;
+        mother = null;
         children = new ArrayList<Person>();
     }
     
@@ -92,11 +94,7 @@ public class Person
      * Indica si la persona tiene descendencia
      */
     public boolean hasChildrens(){
-        boolean descendent = false;
-        if(children.size() > 0){
-            descendent = true;
-        }
-        return descendent;
+        return !children.isEmpty();
     }
     
     /**
